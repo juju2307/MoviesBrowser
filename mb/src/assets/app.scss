@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$backgroundpage: #15141F;
+$fonttitle: "Lato", sans-serif;
+
+body{
+    display: flex;
+    background-color:$backgroundpage;
+    font-family: $fonttitle;
+    width: 375px;
+    height: 812px;
+
+    .title{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        color: white;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.02em;
+        margin-top: -700px;
+
+            .title1{
+                color: #FF8F71;
+            }
+    }
+    .navigation{
+        display: flex;
+        margin-top: 500px;
+        
+            .icones{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 375px;
+                height: 84px;
+                border: 2px solid white;
+                margin-top: 150px;
+                padding: 0;
+            
+                
+                li{
+                    display: flex;
+                    list-style-type: none;
+
+                    img{
+                        display: flex;
+                        width: 24px;
+                        height: 26px; 
+                        margin-left: 40px;
+                        margin-right: 40px;
+                        background-color: white;
+                        
+                        
+                    
+                    }
+                
+                }
+            }
+     }
+}
