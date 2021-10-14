@@ -24,7 +24,7 @@ body .title {
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 0.02em;
-  margin-top: -700px;
+  margin-top: -800px;
 }
 
 body .title .title1 {
@@ -53,8 +53,7 @@ body .navigation .icones {
           align-items: center;
   width: 375px;
   height: 84px;
-  border: 2px solid white;
-  margin-top: 150px;
+  margin-top: 200px;
   padding: 0;
 }
 
@@ -65,14 +64,14 @@ body .navigation .icones li {
   list-style-type: none;
 }
 
-body .navigation .icones li img {
+body .navigation .icones li .img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 24px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
   margin-left: 40px;
   margin-right: 40px;
-  background-color: white;
+  color: grey;
 }
 /*# sourceMappingURL=app.css.map */

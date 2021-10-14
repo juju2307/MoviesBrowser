@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { FaHome } from "react-icons/fa"; 
+import {AiFillHome} from "react-icons/ai"; 
 import { IoSearchCircle } from "react-icons/io5";
 import {FaUser} from "react-icons/fa";
 
@@ -12,13 +12,13 @@ export default function Nav() {
             <nav>
                  <ul className="icones">
                      <li>
-                         <Link className="img" to="/"><FaHome/></Link>
+                         <Link to="/"><AiFillHome className="img"/></Link>
                      </li>
-                     <li className="img">
-                         <Link className="img" to="/details"><IoSearchCircle/></Link>
+                     <li>
+                         <Link to="/details"><IoSearchCircle className="img"/></Link>
                      </li>
-                     <li className="img">
-                         <Link className="img" to="/discover"><FaUser/></Link>
+                     <li>
+                         <Link to="/discover"><FaUser className="img"/></Link>
                      </li>
                  </ul>
             </nav>
