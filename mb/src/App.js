@@ -1,10 +1,10 @@
 import React from 'react';
 import {Route,Switch, BrowserRouter as Router} from 'react-router-dom';
 import {useState, useEffect} from 'react';
-import Home from './Home.jsx';
-import Discover from './discover.jsx';
-import Details from './details.jsx';
-import Nav from "./Nav.jsx";
+import Home from './components/Home.jsx';
+import Discover from './components/discover.jsx';
+import Details from './components/details.jsx';
+import Nav from "./components/Nav.jsx";
 
 
 
