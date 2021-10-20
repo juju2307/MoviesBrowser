@@ -1,4 +1,6 @@
 import React from 'react';
+import '../css/title.css';
+<css />
 
 export default function Title(){
     return(

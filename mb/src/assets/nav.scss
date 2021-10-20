@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap');
+
+$backgroundpage: #15141F;
+$colorbutton: #FF8F71;
+$fonttitle: "Lato", sans-serif;
+
+.navigation{
+    display: flex;
+    position: fixed;
+    bottom: 80px;
+    margin-left: 40px;
+  
+        .icones{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 280px;
+            height: 84px;
+            padding: 0;
+           
+          
+            li{
+                display: flex;
+                list-style-type: none;
+
+                .img{
+                    display: flex;
+                    width: 30px;
+                    height: 30px; 
+                    color: grey;  
+                    cursor: pointer;
+                   
+                    .img:hover{
+                        color: $colorbutton;
+                        
+                    }
+                }
+            
+            }
+        }
+ }
