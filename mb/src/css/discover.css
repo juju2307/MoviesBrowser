@@ -11,8 +11,6 @@ body .discover {
   background-color: #15141F;
   font-family: "Lato", sans-serif;
   border: 2px solid white;
-  height: 812px;
-  width: 375px;
 }
 
 body .discover .search {
@@ -121,6 +119,12 @@ body .discover .moviesall {
   width: 350px;
   height: 500px;
   margin-top: 150px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+body .discover .moviesall::-webkit-scrollbar {
+  display: none;
 }
 
 body .discover .moviesall .link {
@@ -144,5 +148,24 @@ body .discover .moviesall .link .imageslist {
 
 body .discover .moviesall .link .imageslist .img {
   width: 100%;
+}
+
+body .discover .moviesall .link .imageslist .alltitlemovies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 146px;
+  height: 19px;
+}
+
+body .discover .moviesall .link .imageslist .alltitlemovies .alltitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
 }
 /*# sourceMappingURL=discover.css.map */

@@ -14,8 +14,8 @@ body{
        background-color: $backgroundpage;
        font-family: $fonttitle;
        border: 2px solid white;
-       height: 812px;
-       width: 375px;
+       //height: 812px;
+      // width: 375px;
       
    
 
@@ -81,6 +81,9 @@ body{
              width: 350px;
              height: 500px;
              margin-top: 150px;
+             overflow-y: scroll;
+             scrollbar-width: none;
+             &::-webkit-scrollbar{display:none};
 
              .link{
                  display: flex;
@@ -91,11 +94,22 @@ body{
                      display: flex;
                      width: 154px;
                      height: 215px;
+
                      .img{
                          width: 100%;
                      }
                      .alltitlemovies{
-                        
+                        display: flex;
+                        flex-direction: row;
+                        width: 146px;
+                        height: 19px;
+
+                        .alltitle{
+                            display: flex;
+                            font-size: 16px;
+
+
+                        }
                      }
                  }
              }

@@ -20,10 +20,7 @@ export default function MoviesGenderList ({moviesGender}) {
                     </div>
                     <div className="alltitlemovies">
                         <p className="alltitle">
-                            {movie.title}
-                        </p>
-                        <p className="datediscover">
-                            {movie.release_date}
+                            {movie.title}<span>({movie.release_date.substring(0,4)})</span>
                         </p>
                     </div>
                 </Link> 
