@@ -1,28 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import Title from '../components/Title';
 import Navigation from '../components/Navigation';
-import GenderList from '../components/GenderList';
-import {FiSearch} from 'react-icons/fi';
+import MoviesGenderList from '../components/MoviesGenderList';
+import { Link } from 'react-router-dom';
+import {IconContext} from "react-icons"
+import {BiSearch} from 'react-icons/bi';
 import '../css/discover.css';
-
-//import { NavLink } from 'react-router-dom';
-
 
 
 
 export default function Discover() {
     
-     //const [movies, setMovies] = useState([]);
+    
      const [moviesGender, setMoviesGender] = useState([]);
-     const [gender,setGender] = useState(28);
+     const [gender,setGender] = useState([]);
+     const [genderID,setGenderID] = useState(28);
      const URL_BASE = 'https://api.themoviedb.org/3/discover/movie?';
      const API_KEY = 'api_key=95ef57a6064864cfbc9afc899cc5119f';
-     const API_PARAM = '&language=en-US&sort_by=popularity.desc';
-    //const page ='&page=1';
+     const page =1;
+     const API_PARAM = `&language=en-US&sort_by=popularity.desc&page=${page}&with_genres=`;
 
-     
-     //const [page, setPage] = useState(1);
-    
      const fetchGender = async ()=> {
 
         try {
@@ -51,79 +48,61 @@ export default function Discover() {
           console.error(err);
       }
   }
-  useEffect(() => {
-     setMoviesGender([]);
-      fetchMoviesGender();
-      // eslint-disable-next-line react-hooks/exhaustive-deps 
-  },[gender]);
- 
+    useEffect(() => {
+    //    setMoviesGender([]);
+        fetchMoviesGender();
+        // eslint-disable-next-line react-hooks/exhaustive-deps 
+    },[genderID]);
 
- 
-
-    //let stockMoviesGender= {...moviesGender.genres};
     
 
     function Research() {
         return (
             <div className="search">
-                <p className="iconloupe"><FiSearch/></p>
-                <input className="inputsearch" type="text" placeholder="MoviesBrowser"></input>
+                <input className="inputsearch" type="text" placeholder="MoviesBrowser"/>
+                     <IconContext.Provider value={{size: '3vh'}}>
+                         <BiSearch />
+                     </IconContext.Provider>
             </div>
         );
     }
+    function NavGender(){
 
-   /* function changeGender(e) {
-       e.preventDefault();
-       setMoviesGender(e.target.id);
-       console.log('setMoviesGender:', gender)
-    }*/
+        function ChangeGender(e){
+            // e.preventDefault();
+            setGenderID(e.target.id)
+            console.log(e.target.id);
+        }
 
-   
-  
-    /*function MoviesList() {
-        
-     if(movies.length !== 0) {
-        return (
-        <div className="moviesall">
-    
-           {movies.map((movie) => {
-               
-               return (
-            <nav className="movieslist">
-                <NavLink to={`/details/${ movie.id }`} id={movie.id}>
-                    <div className="imageslist">
-                        <img src={"https://image.tmdb.org/t/p/w300" + movie.poster_path} alt={"https://image.tmdb.org/t/p/w300" + movie.title}/>
-                    </div>
-                    <div className="alltitlemovies">
-                        <p className="alltitle">
-                            {movie.title}
-                        </p>
-                        <p className="datediscover">
-                            {movie.release_date}
-                        </p>
-                    </div>
-                </NavLink> 
-            </nav>
-               )
-             })
-            }
-        
-         </div>  
+        return(
+            <div className="listgender">
+
+                {gender.map((genre => { 
+
+                    return(
+
+                         <div className="listgender" key={genre.id}>
+                              <Link className="genderli" id={genre.id} onClick= {(e) => ChangeGender(e)} >{genre.name}</Link>
+                         </div>
+
+                    )
+                }))
+                }
+           </div>
+          
         )
-    } else {
-        return (
-            <h3>Loading</h3>
-        )
+
     }
-}*/
-
     
+//   console.log(moviesGender);
     if(moviesGender.length !== 0) {
+
         return(
             <div className="discover">
                  <Title/>
                  <Research/>
-                 <GenderList gender={gender}/>
+                 <NavGender/>
+                 <MoviesGenderList moviesGender={moviesGender}/>
                  <Navigation/>
                   
             </div> 

@@ -15,7 +15,7 @@ export default function CarouselTrending(props) {
                  <Carousel itemsToShow={1} itemPadding={[10,100]}   pagination={false} className="trendingmoove">
                      { Object.entries(stockMoviesTrending).map((key, value) => {
                         return (
-                            <a className="linkmovies" href="/Details">
+                            <a className="linkmovies" href="/Details" key={key[1].id}>
                                 <div className="moviecard">
                                     <img src={stockMoviesTrending[dataMovie] && "https://image.tmdb.org/t/p/w300" + key[1].poster_path} alt="title" className="imgtrending"/>
                                

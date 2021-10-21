@@ -3,9 +3,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
-  bottom: 80px;
+  position: static;
+  bottom: 0px;
   margin-left: 40px;
+  margin-top: 50px;
 }
 
 .navigation .icones {

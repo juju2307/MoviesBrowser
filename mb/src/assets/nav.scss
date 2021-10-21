@@ -6,9 +6,10 @@ $fonttitle: "Lato", sans-serif;
 
 .navigation{
     display: flex;
-    position: fixed;
-    bottom: 80px;
+    position: static;
+    bottom: 0px;
     margin-left: 40px;
+    margin-top: 50px;
   
         .icones{
             display: flex;
@@ -17,6 +18,7 @@ $fonttitle: "Lato", sans-serif;
             width: 280px;
             height: 84px;
             padding: 0;
+           
            
           
             li{

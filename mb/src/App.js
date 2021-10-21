@@ -6,8 +6,6 @@ import Details from './pages/details.jsx';
 import User from './components/User.jsx';
 
 
-
-
 export default function App() {
       
       return(

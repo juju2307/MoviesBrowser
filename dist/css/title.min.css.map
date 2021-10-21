@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,AAAA,CACF,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,GAAG,CACnB,WAAW,CAAE,QAAQ,CACrB,KAAK,CAAE,KAAK,CACZ,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,GAAG,CAChB,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,MAAM,CACrB,WAAW,CAAE,IAAI,CAKrB,AAdD,AAWQ,MAXF,CAWE,OAAO,AAAA,CACH,KAAK,CAAE,OAAO,CACjB",
+    "sources": [
+        "../../mb/src/assets/title.scss"
+    ],
+    "names": [],
+    "file": "title.min.css"
+}

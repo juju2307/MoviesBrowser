@@ -3,14 +3,14 @@ import {BsFillPlayCircleFill} from 'react-icons/bs';
 
 
 
-export default function Trending(props) {
+export default function Trending({trending}) {
 
     let dataMovie = parseInt(Math.floor(Math.random() * 20));
-    let stockMoviesTrending = { ...props.trending.results};
+    let stockMoviesTrending = { ...trending.results};
 
     function RandomTrending() {
         
-     if(props.trending.length !== 0) {
+     if(trending.length !== 0) {
        
 
          return (
