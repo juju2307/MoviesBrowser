@@ -60,7 +60,7 @@ export default function Discover() {
         return (
             <div className="search">
                 <input className="inputsearch" type="text" placeholder="MoviesBrowser"/>
-                     <IconContext.Provider value={{size: '3vh'}}>
+                     <IconContext.Provider value={{size: '3vh',  display: 'flex', position: 'absolute', color:'white', width: '24px', height: '24px'}}>
                          <BiSearch />
                      </IconContext.Provider>
             </div>
@@ -75,7 +75,7 @@ export default function Discover() {
         }
 
         return(
-            <div className="listgender">
+            <div className="gender">
 
                 {gender.map((genre => { 
 

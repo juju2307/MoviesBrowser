@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body .discover {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,6 +16,8 @@ body .discover {
   background-color: #15141F;
   font-family: "Lato", sans-serif;
   border: 2px solid white;
+  height: 812px;
+  width: 375px;
 }
 
 body .discover .search {
@@ -21,16 +28,8 @@ body .discover .search {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-body .discover .search .iconloupe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  color: white;
-  width: 24px;
-  height: 24px;
+  position: relative;
+  width: 100%;
 }
 
 body .discover .search .inputsearch {
@@ -46,6 +45,7 @@ body .discover .search .inputsearch {
   border-radius: 20px;
   margin-left: 30px;
   border: none;
+  color: #BBBBBB;
 }
 
 body .discover .search ::-webkit-input-placeholder {
@@ -76,7 +76,7 @@ body .discover .search ::placeholder {
   font-size: 14px;
 }
 
-body .discover .listgender {
+body .discover .gender {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,29 +84,39 @@ body .discover .listgender {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  margin-right: 10px;
-  overflow-x: scroll;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 250px;
+  padding: 5px;
+  margin-top: 50px;
+  overflow: scroll;
   scrollbar-width: none;
-  cursor: pointer;
 }
 
-body .discover .listgender::-webkit-scrollbar {
+body .discover .gender::-webkit-scrollbar {
   display: none;
 }
 
-body .discover .listgender .genderli {
+body .discover .gender .listgender {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+body .discover .gender .listgender .genderli {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 40px;
-  height: 40px;
   text-decoration: none;
   color: #E2E2E2;
+  padding-right: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-body .discover .listgender .genderli:hover {
+body .discover .gender .listgender .genderli:hover {
   color: #FF8F71;
 }
 
@@ -116,9 +126,7 @@ body .discover .moviesall {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 350px;
-  height: 500px;
-  margin-top: 150px;
+  margin-top: 50px;
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -127,7 +135,15 @@ body .discover .moviesall::-webkit-scrollbar {
   display: none;
 }
 
-body .discover .moviesall .link {
+body .discover .moviesall .movieslist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 180px;
+  height: 250px;
+}
+
+body .discover .moviesall .movieslist .link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,21 +152,24 @@ body .discover .moviesall .link {
       -ms-flex-direction: column;
           flex-direction: column;
   text-decoration: none;
+  color: #E2E2E2;
 }
 
-body .discover .moviesall .link .imageslist {
+body .discover .moviesall .movieslist .link .imageslist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 154px;
-  height: 215px;
+  padding: 10px;
 }
 
-body .discover .moviesall .link .imageslist .img {
-  width: 100%;
+body .discover .moviesall .movieslist .link .imageslist .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
 }
 
-body .discover .moviesall .link .imageslist .alltitlemovies {
+body .discover .moviesall .movieslist .link .alltitlemovies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,14 +177,15 @@ body .discover .moviesall .link .imageslist .alltitlemovies {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 146px;
-  height: 19px;
+  margin-top: -20px;
 }
 
-body .discover .moviesall .link .imageslist .alltitlemovies .alltitle {
+body .discover .moviesall .movieslist .link .alltitlemovies .alltitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: 16px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 /*# sourceMappingURL=discover.css.map */

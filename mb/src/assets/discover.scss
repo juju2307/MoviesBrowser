@@ -6,7 +6,8 @@ $fonttitle: "Lato", sans-serif;
 $colorgender: #E2E2E2;
 
 body{
-    
+    margin: 0;
+    padding: 0;
     
     .discover{
        display: flex;
@@ -14,23 +15,16 @@ body{
        background-color: $backgroundpage;
        font-family: $fonttitle;
        border: 2px solid white;
-       //height: 812px;
-      // width: 375px;
-      
-   
-
+       height: 812px;
+       width: 375px;
+    
         .search{
             display: flex;
             flex-direction: column;
+            position: relative;
+            width: 100%;
+            
 
-
-            .iconloupe{
-                display: flex;
-                position: absolute;
-                color: white;
-                width: 24px;
-                height: 24px;
-            }
             .inputsearch{
                 display: flex;
                 align-content: center;
@@ -41,6 +35,7 @@ body{
                 border-radius: 20px;
                 margin-left: 30px;
                 border: none;
+                color: #BBBBBB;
             
             } 
             ::placeholder {
@@ -48,73 +43,91 @@ body{
                 font-family: 'Inter', sans-serif;
                 font-weight: 500;
                 font-size: 14px;
-
             }
         }
-                .listgender{
+                .gender{
 
                     display: flex;
                     flex-direction: row;
-                    font-family: $fonttitle;
-                    font-size: 16px;
-                    margin-right: 10px;
-                    overflow-x: scroll;
+                    align-items: center;
+                    height: 250px;
+                    padding: 5px;
+                    margin-top: 50px;
+                    overflow: scroll;
                     scrollbar-width: none;
                     &::-webkit-scrollbar{display:none};
-                    cursor: pointer;
+             
 
-                     .genderli{
-                        display: flex;
-                        width: 40px;
-                        height: 40px;
-                        text-decoration: none;
-                        color: $colorgender;
+                    .listgender{
+
+                        font-family: $fonttitle;
+                        font-size: 16px;
+                      
+                        .genderli{
+                           display: flex;
+                           text-decoration: none;
+                           color: $colorgender;
+                           padding-right: 10px;
+                           padding-left: 10px;
+                           cursor: pointer;
+                           transition: 0.2s ease-in-out;
                        
-                     }
-                     .genderli:hover{
-                         color: $colorbutton;
-                     }
+                        }
+                        .genderli:hover{
+                            color: $colorbutton;
+                        }
                 }
+            }
          .moviesall{
              display: flex;
              flex-wrap: wrap;
-             width: 350px;
-             height: 500px;
-             margin-top: 150px;
+             margin-top: 50px;
              overflow-y: scroll;
              scrollbar-width: none;
              &::-webkit-scrollbar{display:none};
+           
+            .movieslist {
+                display: flex;
+                width: 180px;
+                height: 250px;
 
-             .link{
-                 display: flex;
-                 flex-direction: column;
-                 text-decoration: none;
-                 
-                 .imageslist{
-                     display: flex;
-                     width: 154px;
-                     height: 215px;
-
-                     .img{
-                         width: 100%;
-                     }
-                     .alltitlemovies{
+                .link{
+                    display: flex;
+                    flex-direction: column;
+                    text-decoration: none;
+                    color: $colorgender;
+                   
+                    
+                    .imageslist{
                         display: flex;
-                        flex-direction: row;
-                        width: 146px;
-                        height: 19px;
-
-                        .alltitle{
+                        padding: 10px;
+                     
+                       
+                        .img{
                             display: flex;
-                            font-size: 16px;
-
-
+                            border-radius: 20px;
+                         
                         }
-                     }
-                 }
-             }
-         } 
-    }
+                    }
+                        .alltitlemovies{
+                           display: flex;
+                           flex-direction: row;
+                           margin-top: -20px;
+                         
+                           .alltitle{
+                               display: flex;
+                               font-size: 16px;
+                               margin-top: 20px;
+                               margin-left: 10px;
+                             
+
+                           }
+                        }
+                }
+            }
+        }
+    } 
 }
+
      
 
