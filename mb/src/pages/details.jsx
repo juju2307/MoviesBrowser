@@ -1,33 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import { IconContext } from 'react-icons';
-import {HiPlay} from 'react-icons/hi';
-import {GrPrevious} from 'react-icons/gr';
-import {IoTime} from 'react-icons/io';
-import {AiFillStar} from 'react-icons/ai';
 import { useParams } from 'react-router';
-
+import '../css/details.css';
+import VideoDetails from '../components/videodetails';
+import TitleDetails from '../components/TitleDetails';
+import ReleaseDateGender from '../components/ReleaseDateGender';
+import Synopsis from '../components/Synopsis';
 
 export default function Details() {
 
         const {id} = useParams();
-        const API_URL = 'https://api.themoviedb.org/3/movie/${id}';
-        const API_KEY = '?api_key=95ef57a6064864cfbc9afc899cc5119f';
-        const API_PARAM = '&language=en-US&page=1';
-    
-
-        const [movieId, setMovieId] = useState(id)
+        const API_DETAILS = 'https://api.themoviedb.org/3/movie/' + id + '?api_key=95ef57a6064864cfbc9afc899cc5119f&language=en-US'
         const [movie, setMovie] = useState([])
-        const [moviesRelated, setMoviesRelated] = useState([])
+       // const [video, setVideo] = useState([])
+        //const [moviesRelated, setMoviesRelated] = useState([])
 
         const fetchMovie = async () => {
 
             try {
                 const response = await fetch(
-                    API_URL + API_KEY + API_PARAM
+                    API_DETAILS
                 );
                 const dataMovie = await response.json();
-                setMovieId(dataMovie)
-                console.log(dataMovie)
+                setMovie(dataMovie)
+               
+               
             }catch(err) {
                 console.error(err)
             }
@@ -35,8 +31,29 @@ export default function Details() {
         useEffect(() => {
             fetchMovie()
         }, [])
+   
+      
+    
 
-    return(
-        <h1>Details</h1>
-    )
+    if(movie.length !== 0)  {
+      
+        return(
+
+             <div className="moviesdetails">
+             
+                 <VideoDetails movie={movie}/>
+                 <TitleDetails movie={movie}/>
+                 <ReleaseDateGender movie={movie}/>
+                 <Synopsis movie={movie}/>
+
+                 <div className="relatedmovies">
+
+                 </div>
+             </div>
+         )
+    } else {
+        return (
+            <h2>Loading...</h2>
+        )
+    }
 }

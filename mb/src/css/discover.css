@@ -15,7 +15,6 @@ body .discover {
           flex-direction: column;
   background-color: #15141F;
   font-family: "Lato", sans-serif;
-  border: 2px solid white;
   height: 812px;
   width: 375px;
 }
