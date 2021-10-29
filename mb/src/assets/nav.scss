@@ -9,7 +9,7 @@ $fonttitle: "Lato", sans-serif;
     position: static;
     bottom: 0px;
     margin-left: 40px;
-    margin-top: 50px;
+    margin-top: 80px;
   
         .icones{
             display: flex;
@@ -30,12 +30,12 @@ $fonttitle: "Lato", sans-serif;
                     width: 30px;
                     height: 30px; 
                     color: grey;  
-                    cursor: pointer;
-                   
-                    .img:hover{
-                        color: $colorbutton;
-                        
-                    }
+                    cursor: pointer; 
+                }
+                
+                .img:hover{
+                    color: $colorbutton;
+                    
                 }
             
             }

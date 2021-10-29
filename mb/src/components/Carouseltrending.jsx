@@ -25,7 +25,7 @@ export default function CarouselTrending(props) {
                                         <div className="scoremovie">
                                             <p className="imdb">IMDb</p>
                                             <div className="group">
-                                                 <p className="staricon"><AiFillStar/></p>
+                                                 <p className= "staricon"><AiFillStar/></p>
                                                  <p className="score">{movie[1].vote_average}</p>
                                             </div>
                                         </div>

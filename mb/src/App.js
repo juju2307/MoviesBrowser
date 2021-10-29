@@ -4,6 +4,7 @@ import Home from './pages/Home.jsx';
 import Discover from './pages/discover.jsx';
 import Details from './pages/details.jsx';
 import User from './components/User.jsx';
+import Videoplay from './pages/Videoplay.jsx';
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
                       <Route path="/discover"><Discover/></Route>
                       <Route path="/details/:id"><Details/></Route>
                       <Route path="/user"><User/></Route>
+                      <Route path="/videoplay"><Videoplay/></Route>
 
                   </Switch>
               </div>

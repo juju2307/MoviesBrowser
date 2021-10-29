@@ -14,7 +14,7 @@ body{
        flex-direction: column;
        background-color: $backgroundpage;
        font-family: $fonttitle;
-       height: 812px;
+       height: 900px;
        width: 375px;
     
         .search{
@@ -53,34 +53,32 @@ body{
                     padding: 5px;
                     margin-top: 50px;
                     overflow: scroll;
-                    scrollbar-width: none;
+                   scrollbar-width: none ;
                     &::-webkit-scrollbar{display:none};
-             
-
-                    .listgender{
-
-                        font-family: $fonttitle;
-                        font-size: 16px;
+                   overflow: hidden;
+                   overflow-x: scroll;
                       
                         .genderli{
                            display: flex;
                            text-decoration: none;
+                           font-family: $fonttitle;
+                           font-size: 16px;
                            color: $colorgender;
                            padding-right: 10px;
                            padding-left: 10px;
                            cursor: pointer;
                            transition: 0.2s ease-in-out;
-                       
+                           
                         }
                         .genderli:hover{
                             color: $colorbutton;
                         }
                 }
-            }
+            
          .moviesall{
              display: flex;
              flex-wrap: wrap;
-             margin-top: 50px;
+             margin-top: 0px;
              overflow-y: scroll;
              scrollbar-width: none;
              &::-webkit-scrollbar{display:none};
@@ -89,6 +87,7 @@ body{
                 display: flex;
                 width: 180px;
                 height: 250px;
+                margin-top: 10px;
 
                 .link{
                     display: flex;
@@ -102,7 +101,7 @@ body{
                         padding: 10px;
                      
                        
-                        .img{
+                        .imageslistall{
                             display: flex;
                             border-radius: 20px;
                          

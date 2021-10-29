@@ -15,7 +15,7 @@ body .home {
   background-color: #15141F;
   font-family: "Lato", sans-serif;
   border: 2px solid white;
-  height: 812px;
+  height: 900px;
   width: 375px;
 }
 
@@ -23,13 +23,30 @@ body .home .affiche {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   height: 191px;
   margin-top: 0px;
+  overflow: hidden;
   border-radius: 30px;
   background-position: top;
   background-repeat: no-repeat;
   background-size: auto;
+}
+
+body .home .affiche .imagetrending {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-radius: 20px;
+  width: 300px;
+  height: 191px;
+  margin-right: 20px;
 }
 
 body .home .affiche .linkspotlight {
@@ -40,6 +57,7 @@ body .home .affiche .linkspotlight {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-weight: normal;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -49,12 +67,12 @@ body .home .affiche .linkspotlight {
   border: 1px solid white;
   border-radius: 20px;
   background: rgba(218, 218, 218, 0.3);
-  -webkit-backdrop-filter: blur(4.81px);
-          backdrop-filter: blur(4.81px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   width: 211px;
   height: 62px;
-  margin-bottom: 10px;
-  margin-left: 50px;
+  margin-top: -70px;
+  margin-left: 40px;
 }
 
 body .home .affiche .play {
@@ -67,6 +85,17 @@ body .home .affiche .play {
   color: gray;
   width: 40px;
   height: 40px;
+  margin-right: 30px;
+}
+
+body .home .affiche .play .iconplay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .home .affiche .play .iconplay:hover {
+  color: #FF8F71;
 }
 
 body .home .affiche .textspotlight {
@@ -113,7 +142,7 @@ body .home .titletrending {
   width: 99px;
   height: 29px;
   margin-left: 24px;
-  margin-top: 300px;
+  margin-top: 320px;
   color: white;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -129,9 +158,9 @@ body .carouseltrending {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 350px;
   height: 359px;
-  margin-top: 5px;
+  margin-top: 25px;
 }
 
 body .carouseltrending .linkmovies {
@@ -146,7 +175,7 @@ body .carouseltrending .linkmovies .moviecard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 300px;
+  height: 310px;
   margin-top: 55px;
 }
 
@@ -155,7 +184,8 @@ body .carouseltrending .linkmovies .moviecard .imgtrending {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  height: 359px;
+  height: 310px;
+  border-radius: 20px;
 }
 
 body .carouseltrending .linkmovies .moviecard .scoremovie {
@@ -168,7 +198,7 @@ body .carouseltrending .linkmovies .moviecard .scoremovie {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin-left: 120px;
+  margin-left: 115px;
   margin-top: 15px;
   position: absolute;
   width: 77px;
@@ -176,8 +206,8 @@ body .carouseltrending .linkmovies .moviecard .scoremovie {
   border: 1px solid white;
   border-radius: 10px;
   background: rgba(218, 218, 218, 0.3);
-  -webkit-backdrop-filter: blur(4.81px);
-          backdrop-filter: blur(4.81px);
+  -webkit-backdrop-filter: blur(2.5px);
+          backdrop-filter: blur(2.5px);
 }
 
 body .carouseltrending .linkmovies .moviecard .scoremovie .imdb {
@@ -198,6 +228,8 @@ body .carouseltrending .linkmovies .moviecard .scoremovie .group {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: -10px;
   padding-left: 10px;
 }
@@ -231,16 +263,16 @@ body .carouseltrending .linkmovies .titlemovie {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 220px;
+  margin-top: 210px;
   width: 180px;
-  height: 81.2px;
-  margin-left: 30px;
+  height: 79px;
+  margin-left: 13px;
   border: 1px solid white;
   border-radius: 20px;
   font-size: 16px;
   color: white;
   background: rgba(218, 218, 218, 0.3);
-  -webkit-backdrop-filter: blur(4.81px);
-          backdrop-filter: blur(4.81px);
+  -webkit-backdrop-filter: blur(2.5px);
+          backdrop-filter: blur(2.5px);
 }
 /*# sourceMappingURL=home.css.map */

@@ -16,7 +16,7 @@ export default function MoviesGenderList ({moviesGender}) {
             <div className="movieslist" key={movie.id}>
                 <Link className="link" to={movie && "/details/" +  movie.id } id={movie.id}>
                     <div className="imageslist">
-                        <img src={"https://image.tmdb.org/t/p/w300" + movie.poster_path} alt={movie.title} width="154px" height="184px"/>
+                        <img className='imageslistall'src={"https://image.tmdb.org/t/p/w300" + movie.poster_path} alt={movie.title} width="154px" height="184px"/>
                     </div>
                     <div className="alltitlemovies">
                         <p className="alltitle">

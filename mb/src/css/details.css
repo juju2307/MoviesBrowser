@@ -15,7 +15,7 @@ body .moviesdetails {
   position: relative;
   background-color: #15141F;
   font-family: "Lato", sans-serif;
-  height: 812px;
+  height: 900px;
   width: 375px;
 }
 
@@ -57,9 +57,11 @@ body .moviesdetails .video .playicon {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  top: 10px;
+  left: 150px;
   -ms-flex-item-align: center;
       align-self: center;
-  margin-top: 100px;
+  margin-top: 80px;
   color: white;
   cursor: pointer;
 }
@@ -76,6 +78,7 @@ body .moviesdetails .title {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: -30px;
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-box-align: start;
@@ -136,7 +139,6 @@ body .moviesdetails .title .details {
           flex-direction: row;
   font-weight: normal;
   color: #BCBCBC;
-  margin-top: -20px;
   margin-bottom: 5px;
 }
 
@@ -144,7 +146,6 @@ body .moviesdetails .title .details .timedetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 20px;
 }
 
 body .moviesdetails .title .details .timedetails .timeicon {
@@ -166,7 +167,6 @@ body .moviesdetails .title .details .votedetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 20px;
   margin-left: 20px;
 }
 
@@ -325,7 +325,6 @@ body .moviesdetails .synopsis {
       -ms-flex-align: start;
           align-items: flex-start;
   font-family: "Lato", sans-serif;
-  border-bottom: 1px solid #515151;
   width: 320px;
   color: white;
   margin-top: -5px;
@@ -360,5 +359,100 @@ body .moviesdetails .synopsis .overview .buttonreadmore {
 body .moviesdetails .synopsis .overview .buttonreadmore:hover {
   background-color: #FF8F71;
   color: #15141F;
+}
+
+body .moviesdetails .relatedmovies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-family: "Lato", sans-serif;
+  color: white;
+  width: 320px;
+  height: 230px;
+  margin-bottom: 10px;
+}
+
+body .moviesdetails .relatedmovies .relatedtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+body .moviesdetails .relatedmovies .carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 60px;
+  height: 250px;
+  width: 330px;
+  margin-top: 20px;
+}
+
+body .moviesdetails .relatedmovies .carousel .linkmoviesrelated {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+}
+
+body .moviesdetails .relatedmovies .carousel .linkmoviesrelated .imagemoviesrelated {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
+}
+
+body .moviesdetails .relatedmovies .carousel .linkmoviesrelated .imagemoviesrelated img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
+  height: 200px;
+  width: 250px;
+}
+
+body .moviesdetails .relatedmovies .carousel .infosmovie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  font-family: "Lato", sans-serif;
+  top: 100px;
+  font-size: 12px;
+  width: 250px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+}
+
+body .moviesdetails .relatedmovies .carousel .infosmovie .moviesrelatedtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  margin-left: 120px;
+  margin-top: -10px;
+}
+
+body .moviesdetails .relatedmovies .carousel .infosmovie .moviesrelateddate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  margin-top: -10px;
+  margin-left: 130px;
 }
 /*# sourceMappingURL=details.css.map */

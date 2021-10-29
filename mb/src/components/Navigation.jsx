@@ -4,6 +4,7 @@ import {AiFillHome} from "react-icons/ai";
 import { IoSearchCircle } from "react-icons/io5";
 import {FaUser} from "react-icons/fa";
 import '../css/nav.css'
+import { IconContext } from 'react-icons/lib';
 
 
 export default function Navigation() {
@@ -13,13 +14,13 @@ export default function Navigation() {
             <nav>
                  <ul className="icones">
                      <li>
-                         <Link to="/"><AiFillHome className="img"/></Link>
+                         <Link to="/"><IconContext.Provider value={{className:"img"}}><AiFillHome /></IconContext.Provider></Link>
                      </li>
                      <li>
-                         <Link to="/discover"><IoSearchCircle className="img"/></Link>
+                         <Link to="/discover"><IconContext.Provider value={{className:"img"}}><IoSearchCircle/></IconContext.Provider></Link>
                      </li>
                      <li>
-                         <Link to="/user"><FaUser className="img"/></Link>
+                         <Link to="/user"><IconContext.Provider value={{className:"img"}}><FaUser className="img"/></IconContext.Provider></Link>
                      </li>
                  </ul>
             </nav>

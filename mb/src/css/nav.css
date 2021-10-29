@@ -6,7 +6,7 @@
   position: static;
   bottom: 0px;
   margin-left: 40px;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .navigation .icones {
@@ -42,7 +42,7 @@
   cursor: pointer;
 }
 
-.navigation .icones li .img .img:hover {
+.navigation .icones li .img:hover {
   color: #FF8F71;
 }
 /*# sourceMappingURL=nav.css.map */

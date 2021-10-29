@@ -15,7 +15,7 @@ body .discover {
           flex-direction: column;
   background-color: #15141F;
   font-family: "Lato", sans-serif;
-  height: 812px;
+  height: 900px;
   width: 375px;
 }
 
@@ -91,22 +91,21 @@ body .discover .gender {
   margin-top: 50px;
   overflow: scroll;
   scrollbar-width: none;
+  overflow: hidden;
+  overflow-x: scroll;
 }
 
 body .discover .gender::-webkit-scrollbar {
   display: none;
 }
 
-body .discover .gender .listgender {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-}
-
-body .discover .gender .listgender .genderli {
+body .discover .gender .genderli {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
   color: #E2E2E2;
   padding-right: 10px;
   padding-left: 10px;
@@ -115,7 +114,7 @@ body .discover .gender .listgender .genderli {
   transition: 0.2s ease-in-out;
 }
 
-body .discover .gender .listgender .genderli:hover {
+body .discover .gender .genderli:hover {
   color: #FF8F71;
 }
 
@@ -125,7 +124,7 @@ body .discover .moviesall {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 0px;
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -140,6 +139,7 @@ body .discover .moviesall .movieslist {
   display: flex;
   width: 180px;
   height: 250px;
+  margin-top: 10px;
 }
 
 body .discover .moviesall .movieslist .link {
@@ -161,7 +161,7 @@ body .discover .moviesall .movieslist .link .imageslist {
   padding: 10px;
 }
 
-body .discover .moviesall .movieslist .link .imageslist .img {
+body .discover .moviesall .movieslist .link .imageslist .imageslistall {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Title from '../components/Title';
 import Navigation from '../components/Navigation';
 import MoviesGenderList from '../components/MoviesGenderList';
-import { Link } from 'react-router-dom';
 import {IconContext} from "react-icons"
 import {BiSearch} from 'react-icons/bi';
 import '../css/discover.css';
@@ -21,6 +20,7 @@ export default function Discover() {
      const API_PARAM = `&language=en-US&sort_by=popularity.desc&page=${page}&with_genres=`;
 
      const fetchGender = async ()=> {
+
 
         try {
             const response = await fetch(
@@ -68,10 +68,10 @@ export default function Discover() {
     }
     function NavGender(){
 
-        function ChangeGender(e){
-            // e.preventDefault();
-            setGenderID(e.target.id)
-            console.log(e.target.id);
+        function ChangeGender(event){
+             event.preventDefault();
+            setGenderID(event.target.id)
+          
         }
 
         return(
@@ -81,10 +81,8 @@ export default function Discover() {
 
                     return(
 
-                         <div className="listgender" key={genre.id}>
-                              <Link className="genderli" id={genre.id} onClick= {(e) => ChangeGender(e)} >{genre.name}</Link>
-                         </div>
-
+                        <p className="genderli" id={genre.id} onClick= {(event) => ChangeGender(event)} key={genre.id} >{genre.name}</p>
+                
                     )
                 }))
                 }
